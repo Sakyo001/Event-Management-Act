@@ -1,0 +1,114 @@
+﻿/* The overall container of the form inside a square container */
+.event-container {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 1537px; /* Square container width */
+    height: 863px; /* Square container height */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Main container for left and right sides */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Left side styling */
+.left-side {
+    width: 48%; /* Left section takes up 48% of the space */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Right side styling */
+.right-side {
+    width: 48%; /* Right section takes up 48% of the space */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* Flexbox for club name and event name to be side by side */
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Divider Line Between Left and Right Section */
+.divider {
+    width: 1px;
+    background-color: #6A5553; /* Yellow line color */
+    height: 100%; /* Full height of the container */
+}
+
+/* Description and file input styling */
+textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Back link styling */
+.back-link {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #A04ADA;
+    text-decoration: underline;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-color: #F5BF5B;
+    color: #451B37;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    button:hover {
+        background-color: #6a4f67;
+    }
+
+/* Input styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"] {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}

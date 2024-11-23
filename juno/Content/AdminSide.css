@@ -1,0 +1,71 @@
+﻿body {
+    background-color: #302036;
+}
+
+/* In site.css */
+.banner {
+    position: absolute; /* Position at the top left of the page */
+    top: 0px; /* Adjust as needed */
+    left: 28px; /* Adjust as needed */
+    width: 331.5px; /* Set exact width */
+    height: 706px; /* Set exact height */
+    object-fit: cover; /* Ensures the image fills the dimensions without distortion */
+    z-index: -1; /* Places the image behind other content */
+}
+
+#logout-link {
+    position: fixed;
+    top: 20px; /* Adjust the top spacing */
+    right: 20px; /* Adjust the right spacing */
+    font-family: 'Poppins', sans-serif; /* Poppins font */
+    font-size: 13px; /* Font size */
+    color: #A04ADA; /* Desired color */
+    text-decoration: underline; /* Underline the link */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+    font-weight: 300;
+}
+
+
+/* General reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navigation overlay on the banner image */
+.overlay-nav {
+    position: absolute;
+    top: 300px; /* Adjust to move the links down inside the image */
+    left: 120px; /* Adjust to move the links in from the left */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+}
+
+    .overlay-nav a {
+        font-weight: 600;
+        font-size: 16px;
+        color: #451B37; /* Light color to stand out against the banner */
+        text-decoration: none;
+    }
+
+        .overlay-nav a:hover {
+            color: #BD7D00; /* Highlight color on hover */
+        }
+
+.square {
+    width: 1537px;
+    height: 840px;
+    background-color: #473A51;
+    border-radius: 25px 25px 0 0; /* Top left and top right corners rounded */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15); /* Inner shadow */
+    position: fixed; /* Fixes it to the bottom right */
+    bottom: 0; /* Aligns to bottom */
+    right: 0; /* Aligns to right */
+}
+
+

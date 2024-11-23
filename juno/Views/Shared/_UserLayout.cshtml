@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/User.css" />
+</head>
+<body>
+    <div class="nav-links">
+        <a href="@Url.Action("UserPage", "UserSide")"
+           class="nav-item @ViewBag.ActivePage == 'UpcomingEvents' ? 'active' : ''">
+            Upcoming Events
+        </a>
+
+        <a href="@Url.Action("PastEvents", "UserSide")"
+           class="nav-item @ViewBag.ActivePage == 'PastEvents' ? 'active' : ''">
+            Past Events
+        </a>
+
+        <a href="@Url.Action("RegisteredEvents", "UserSide")"
+           class="nav-item @ViewBag.ActivePage == 'RegisteredEvents' ? 'active' : ''">
+            Registered Events
+        </a>
+    </div>
+    <div class="container">
+        <div class="main-content">
+            @RenderBody() <!-- This is where the main page content will go -->
+        </div>
+        <div class="sidebar">
+            <img src="~/Content/Assets/BANNER!!! (4).png" alt="Banner" class="banner" />
+        </div>
+    </div>
+</body>
+</html>

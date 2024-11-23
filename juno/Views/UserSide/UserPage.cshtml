@@ -1,0 +1,178 @@
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    ViewBag.Title = "User Page";
+}
+
+<a href="@Url.Action("Logout", "Account")">Logout</a>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Cards</title>
+    <link rel="stylesheet" href="~/Content/EventCard.css" />
+    <style>
+        .events-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            width: 700px; /* Adjust the width as necessary */
+            height: auto; /* Automatically adjusts based on content */
+            margin-top: 170px; /* Adjust to move the container down */
+            margin-left: 377px; /* Aligns the container to the right side */
+            margin-bottom: 50px; /* Aligns the container to the right side */
+        }
+
+        .event-card {
+            width: 326px; /* Set the fixed width */
+            height: 587px; /* Set the fixed height */
+            border: 1px solid #ccc;
+            padding: 16px;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            position: relative;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .card-picture {
+            height: 170px;
+            background-color: #d3d3d3;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card-picture img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .content-box {
+            display: flex;
+            flex-direction: column;
+            color: #333;
+        }
+
+        .clubname {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .eventname {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .location {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .event-date,
+        .event-time {
+            font-size: 14px;
+            color: #777;
+            margin-bottom: 10px;
+        }
+
+        .available-slots {
+            font-size: 14px;
+            font-weight: 500;
+            color: #5e3ea1;
+        }
+
+        .event-card p {
+            margin: 5px 0;
+        }
+
+        /* Container for buttons to keep them side by side */
+        .buttons-container {
+            display: flex;
+            gap: 10px; /* Adjust the space between the buttons */
+            margin-top: 10px; /* Space above the buttons */
+        }
+
+        /* Styling for the "Details" button */
+        .details-btn {
+            background-color: rgb(98, 51, 144); /* The color you provided */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+            .details-btn:hover {
+                background-color: rgb(84, 42, 123); /* Slightly darker color on hover */
+            }
+
+        /* Styling for the "Register" button */
+        .register-btn {
+            background-color: rgb(165, 51, 136); /* The color you provided */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+
+            .register-btn:hover {
+                background-color: rgb(146, 43, 116); /* Slightly darker color on hover */
+            }
+
+    </style>
+</head>
+<body>
+    <div class="events-container">
+        @foreach (var evt in Model)
+        {
+            <div class="event-card">
+                <div class="card-picture">
+                    @if (evt.Photo != null)
+                    {
+                        <img src="data:image;base64,@Convert.ToBase64String(evt.Photo)" alt="Event Photo" />
+                    }
+                    else
+                    {
+                        <div class="no-photo">No Photo Available</div>
+                    }
+                </div>
+
+                <div class="content-box">
+                    <h3 class="clubname">@evt.Clubname</h3>
+                    <h4 class="eventname">@evt.Eventname</h4>
+                    <p class="location"><strong>Location:</strong> @evt.Location</p>
+                    <p class="event-date"><strong>Date:</strong> @evt.EventDate.ToString("dd MMM yyyy")</p>
+                    <p class="event-time">
+                        <strong>Time:</strong>
+                        @{
+                            var timeFrom = new DateTime(evt.TimeFrom.Ticks);
+                            var timeTo = new DateTime(evt.TimeTo.Ticks);
+                        }
+                        @timeFrom.ToString("hh:mm tt") to @timeTo.ToString("hh:mm tt")
+                    </p>
+                    <p class="available-slots"><strong>Available Slots:</strong> @evt.MaximumCapacity</p>
+
+                    <div class="buttons-container">
+                        <button class="details-btn">Details</button>
+                        <button class="register-btn">Register!</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>

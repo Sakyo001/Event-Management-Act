@@ -1,0 +1,35 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/AdminSide.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            @RenderBody() <!-- Main page content -->
+        </div>
+        <div class="sidebar">
+            <div class="banner">
+                <img src="~/Content/Assets/Banneradmin.png" alt="Banner" />
+                <nav class="overlay-nav">
+
+                    <a href="@Url.Action("Logout", "Account")" id="logout-link">Logout</a>
+
+                    <a href="@Url.Action("AdminPage", "Admin")">Dashboard</a>
+                    <a href="@Url.Action("Events", "Admin")">Events</a>
+                    <a href="@Url.Action("Users", "Admin")">Users</a>
+                    <a href="@Url.Action("Settings", "Admin")">Settings</a>
+                    <div class="square"></div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

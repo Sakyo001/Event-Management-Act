@@ -1,0 +1,122 @@
+﻿/* Remove margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the html element has no margin or padding */
+html {
+    height: 100%;
+}
+
+/* Apply the background and prevent scrolling */
+body {
+    background-image: url('/Content/Assets/Log In - User (1).png');
+    background-size: cover; /* Ensures the image fully covers the screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeating of the image */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove margin */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: block; /* Remove flexbox centering */
+    height: 100vh;
+    background-color: #f7f7f7; /* Light background color */
+    padding-left: 20px; /* Adds space from the left side */
+}
+
+form {
+    text-align: left;
+    width: 528px;
+    margin-top: 340px; /* Adds space from the top */
+    margin-left: 165px;
+    display: flex;
+    flex-direction: column; /* Align form fields vertically */
+}
+
+/* Container for First Name and Last Name */
+.input-group {
+    display: flex; /* Use flexbox to align inputs horizontally */
+    gap: 10px; /* Adds space between inputs */
+    margin-bottom: 20px; /* Adds space below the group */
+}
+
+/* Style for the Username and Password label */
+label {
+    font-size: 16px;
+    color: #757575; /* Apply the color to the label */
+    display: block;
+    margin-bottom: 5px; /* Add some spacing between label and input */
+}
+
+/* Style for the textboxes (First Name and Last Name) */
+input[name="FirstName"],
+input[name="LastName"] {
+    font-family: 'Poppins', sans-serif; /* Ensure the textbox uses the Poppins font */
+    font-size: 16px; /* Set the font size to 16px */
+    color: #757575; /* Set text color for the textboxes */
+    width: 259px; /* Set width of the textboxes to 240px (reduced size) */
+    height: 52px; /* Set height of the textboxes to 52px */
+    padding-left: 10px; /* Add some padding inside the textboxes */
+    border: 1px solid #ccc; /* Add border to the input boxes */
+    border-radius: 5px; /* Rounded corners for the input boxes */
+}
+
+/* Style for the Username and Password textboxes */
+input[name="Username"],
+input[name="Password"] {
+    font-family: 'Poppins', sans-serif; /* Ensure the textbox uses the Poppins font */
+    font-size: 16px; /* Set the font size to 16px */
+    color: #757575; /* Set text color for the textboxes */
+    width: 528px; /* Set width of the textboxes to 528px */
+    height: 52px; /* Set height of the textboxes to 52px */
+    padding-left: 10px; /* Add some padding inside the textboxes */
+    margin-bottom: 20px; /* Add space between inputs */
+    border: 1px solid #ccc; /* Add border to the input boxes */
+    border-radius: 5px; /* Rounded corners for the input boxes */
+}
+
+/* Style for the Login button */
+button {
+    font-family: 'Poppins', sans-serif; /* Ensure the button uses the Poppins font */
+    font-size: 16px;
+    color: white;
+    width: 528px;
+    height: 52px;
+    background-color: #884882;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+    button:hover {
+        background-color: #6a4f67; /* Darken the button color on hover */
+    }
+
+/* Style for the 'Don't have an account?' text */
+p {
+    font-size: 13px;
+    color: #441A36; /* Color for 'Don't have an account?' text */
+    margin-bottom: 5px;
+    margin-left: 160px;
+    margin-top: 16px;
+}
+
+/* Style for the 'Sign Up' link */
+a {
+    color: #923887; /* Color for the 'Sign Up' link */
+    font-size: 13px;
+    text-decoration: none; /* Remove underline */
+}
+
+    a:hover {
+        text-decoration: underline; /* Underline the link on hover */
+    }

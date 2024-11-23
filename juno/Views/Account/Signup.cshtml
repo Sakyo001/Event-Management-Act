@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Signup";
+}
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="~/Content/register.css" rel="stylesheet" />
+</head>
+
+<form action="/Account/Signup" method="post">
+    <div class="input-group">
+        <div class="input-container">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="FirstName" required />
+        </div>
+
+        <div class="input-container">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="LastName" required />
+        </div>
+    </div>
+
+    <div class="input-container">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="Username" required />
+    </div>
+
+    <div class="input-container">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="Password" required />
+    </div>
+
+    <button type="submit">Sign Up</button>
+
+    <p>Already have an account? <a href="/Account/Login">Log in!</a></p>
+</form>

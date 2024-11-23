@@ -1,0 +1,103 @@
+﻿/* Remove margin and padding from all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the html element has no margin or padding */
+html {
+    height: 100%;
+}
+
+/* Apply the background and prevent scrolling */
+body {
+    background-image: url('/Content/Assets/Log In - Admin.png');
+    background-size: cover; /* Ensures the image fully covers the screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* No repeating of the image */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove margin */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+/* General styling for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7; /* Light background color */
+    height: 100vh;
+}
+form {
+    text-align: left;
+    width: 528px;
+    margin-top: 220px; /* Adds space from the top */
+    margin-left: 741px;
+}
+
+
+/* Style for the Username and Password labels */
+label {
+    font-size: 16px;
+    color: #757575; /* Color for the label text */
+    display: block;
+    margin-bottom: 5px; /* Add space between the label and the input */
+}
+
+/* Style for the textboxes */
+input[type="text"],
+input[type="password"],
+button {
+    font-family: 'Poppins', sans-serif; /* Ensure the textbox and button use the Poppins font */
+    font-size: 16px; /* Set the font size to 16px */
+    color: #757575; /* Set text color for the textboxes */
+    width: 528px; /* Set width of the textboxes to 528px */
+    height: 52px; /* Set height of the textboxes to 52px */
+    padding-left: 10px; /* Add some padding inside the textboxes */
+    margin-bottom: 20px; /* Add space between inputs */
+    border: 1px solid #ccc; /* Add border to the input boxes */
+    border-radius: 5px; /* Rounded corners for the input boxes */
+}
+
+button {
+    background-color: #884882; /* Set button background color to #884882 */
+    color: white; /* Set button text color to white */
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and scaling */
+}
+
+    /* Add hover effect to the button */
+    button:hover {
+        background-color: #6a4f67; /* Darken the button color on hover */
+    }
+
+/* Style for the 'Back to regular Login' link */
+p {
+    font-size: 13px;
+    color: #DAD2ED;
+    margin-top: 16px;
+    text-align: center; /* Center the paragraph */
+}
+
+a {
+    color: #DAD2ED;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline; /* Underline the link on hover */
+    }
+
+/* Error message styling */
+p[style="color:red;"] {
+    font-size: 14px;
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}

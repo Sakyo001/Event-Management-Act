@@ -1,0 +1,33 @@
+﻿
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="~/Content/login.css" rel="stylesheet" />
+</head>
+
+<form action="/Account/Login" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">Log In</button>
+
+    <p>Don't have an account? <a href="/Account/Signup">Sign up!</a></p>
+
+    <p><a href="/Account/AdminLogin" class="admin-link">Admin</a></p>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p style="color:red;">@ViewBag.Message</p>
+}
+
+
+
+
